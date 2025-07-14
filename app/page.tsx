@@ -264,10 +264,12 @@ export default function Home() {
               >
                 <div className="relative h-64 overflow-hidden">
                   <Image
-                    src={product.image}
+                    src={`${product.image}?auto=compress&cs=tinysrgb&w=512&h=384`}
                     alt={product.name}
                     fill
+                    sizes="(max-width: 768px) 100vw, 25vw"
                     className="object-cover transition-transform duration-300 hover:scale-110"
+                    priority={index === 0}
                   />
                   {product.features && (
                     <div className="absolute top-4 left-4">
@@ -361,7 +363,7 @@ export default function Home() {
                 <span className="text-gradient block">Cirebon, Indonesia</span>
               </h2>
               <p className="text-lg text-wood-700 mb-6">
-                For over 25 years, we've been creating exceptional rattan
+                For over 25 years, we&apos;ve been creating exceptional rattan
                 furniture that combines traditional Indonesian craftsmanship
                 with contemporary design. Our skilled artisans in Cirebon use
                 sustainable materials and time-honored techniques passed down
