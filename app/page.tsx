@@ -758,16 +758,16 @@ export default function Home() {
                 </div>
 
                 <div className="p-6">
-                  <div className="flex items-center text-sm text-wood-800 mb-3">
+                  {/* <div className="flex items-center text-sm text-wood-800 mb-3">
                     <Calendar className="h-4 w-4 mr-2" />
                     <span>
                       {new Date(post.publishedAt).toLocaleDateString()}
                     </span>
                     <span className="mx-2">•</span>
                     <span>{post.readTime}</span>
-                  </div>
+                  </div> */}
 
-                  {/* <h3 className="text-xl font-semibold text-wood-900 mb-3 line-clamp-2">
+                  <h3 className="text-xl font-semibold text-wood-900 mb-3 line-clamp-2">
                     {post.title}
                   </h3>
 
@@ -790,7 +790,7 @@ export default function Home() {
                       Read Article
                       <ArrowRight className="ml-1 h-4 w-4" />
                     </Link>
-                  </div> */}
+                  </div>
                 </div>
               </motion.article>
             ))}
