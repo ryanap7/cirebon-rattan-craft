@@ -818,7 +818,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6">
-                  <div className="flex items-center text-sm text-wood-600 mb-3">
+                  <div className="flex items-center text-sm text-wood-800 mb-3">
                     <Calendar className="h-4 w-4 mr-2" />
                     <span>
                       {new Date(post.publishedAt).toLocaleDateString()}
@@ -838,7 +838,7 @@ export default function Home() {
                   <div className="flex justify-between items-center">
                     <div className="flex items-center">
                       <div className="w-8 h-8 bg-wood-200 rounded-full mr-3"></div>
-                      <span className="text-sm text-wood-600">
+                      <span className="text-sm text-wood-800">
                         {post.author.name}
                       </span>
                     </div>
