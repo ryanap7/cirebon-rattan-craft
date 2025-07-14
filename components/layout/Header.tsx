@@ -91,16 +91,15 @@ export default function Header() {
           <motion.div
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            className="w-[180px] h-auto cursor-pointer"
+            className="h-full max-h-[80px] w-auto flex items-center"
           >
             <Image
               src="/assets/logo.webp"
               alt="Cirebon Rattan Craft Logo"
               width={180}
               height={60}
-              sizes="(max-width: 768px) 150px, 180px"
-              className="w-full h-auto"
               priority
+              className="h-full w-auto object-contain"
             />
           </motion.div>
 

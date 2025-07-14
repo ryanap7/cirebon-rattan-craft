@@ -161,12 +161,12 @@ const blogPosts = [
     excerpt:
       "Explore the latest trends in rattan furniture design for 2024. From color palettes to innovative weaving patterns, discover what's shaping the industry this year.",
     content: "Full article content would go here...",
-    image: "https://images.pexels.com/photos/1571464/pexels-photo-1571464.jpeg",
+    image: "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg",
     category: "design-trends",
     author: {
       name: "Maya Design Studio",
       avatar:
-        "https://images.pexels.com/photos/1571464/pexels-photo-1571464.jpeg",
+        "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg",
       bio: "Interior design expert specializing in natural materials",
     },
     publishedAt: "1/15/2024",
@@ -181,7 +181,7 @@ const blogPosts = [
     excerpt:
       "Explore the latest trends in rattan furniture design for 2024. From color palettes to innovative weaving patterns, discover what's shaping the industry this year.",
     content: "Full article content would go here...",
-    image: "https://images.pexels.com/photos/15714635pexels-photo-15714635jpeg",
+    image: "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg",
     category: "design-trends",
     author: {
       name: "Maya Design Studio",
@@ -201,7 +201,7 @@ const blogPosts = [
     excerpt:
       "Explore the latest trends in rattan furniture design for 2024. From color palettes to innovative weaving patterns, discover what's shaping the industry this year.",
     content: "Full article content would go here...",
-    image: "https://images.pexels.com/photos/15714636pexels-photo-15714636jpeg",
+    image: "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg",
     category: "design-trends",
     author: {
       name: "Maya Design Studio",
