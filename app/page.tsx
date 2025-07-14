@@ -138,7 +138,7 @@ const blogPosts = [
   {
     id: 3,
     title: "2024 Rattan Furniture Trends: What's Hot This Year",
-    slug: "2024-rattan-furniture-trends-whats-hot",
+    slug: "traditional-rattan-weaving-techniques-cirebon",
     excerpt:
       "Explore the latest trends in rattan furniture design for 2024. From color palettes to innovative weaving patterns, discover what's shaping the industry this year.",
     content: "Full article content would go here...",
@@ -158,7 +158,7 @@ const blogPosts = [
   {
     id: 4,
     title: "Sustainable Rattan Harvesting Practices in Indonesia",
-    slug: "sustainable-rattan-harvesting-practices-indonesia",
+    slug: "traditional-rattan-weaving-techniques-cirebon",
     excerpt:
       "Learn about the sustainable practices we employ in harvesting rattan from Indonesian forests. Discover how traditional methods support both quality and environmental conservation.",
     content: "Full article content would go here...",
@@ -178,7 +178,7 @@ const blogPosts = [
   {
     id: 5,
     title: "Export Process and Shipping Guidelines for Rattan Furniture",
-    slug: "export-process-shipping-guidelines-rattan-furniture",
+    slug: "traditional-rattan-weaving-techniques-cirebon",
     excerpt:
       "A comprehensive guide to our export process, from order placement to delivery. Understand shipping methods, documentation, and what to expect when importing from Indonesia.",
     content: "Full article content would go here...",
@@ -198,7 +198,7 @@ const blogPosts = [
   {
     id: 6,
     title: "Incorporating Rattan into Modern Interior Design",
-    slug: "incorporating-rattan-modern-interior-design",
+    slug: "traditional-rattan-weaving-techniques-cirebon",
     excerpt:
       "Discover how to seamlessly blend traditional rattan furniture with contemporary interior design. Tips, tricks, and inspiration for creating stunning modern spaces.",
     content: "Full article content would go here...",
@@ -395,7 +395,7 @@ export default function Home() {
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     priority={false}
-                    className="object-cover rounded-xl"
+                    className="object-cover"
                   />
                   {product.features && (
                     <div className="absolute top-4 left-4">
@@ -758,7 +758,7 @@ export default function Home() {
                   ))}
                 </div>
                 <p className="text-wood-700 mb-6 italic">
-                  "{testimonial.text}"
+                  &quot;{testimonial.text}&quot;
                 </p>
                 <div>
                   <div className="font-semibold text-wood-900">
