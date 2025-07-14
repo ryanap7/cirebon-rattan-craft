@@ -119,14 +119,17 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden bg-hero-gradient">
-        <div className="absolute inset-0 bg-black/30"></div>
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage:
-              "url('https://images.pexels.com/photos/6969835/pexels-photo-6969835.jpeg')",
-          }}
-        ></div>
+        <div className="absolute inset-0 bg-black/30 z-10" />
+        {/* Optimized Background */}
+        <Image
+          src="https://images.pexels.com/photos/6969835/pexels-photo-6969835.jpeg"
+          alt="Hero Background"
+          fill
+          priority
+          quality={75}
+          sizes="100vw"
+          className="object-cover object-center z-0"
+        />
 
         <div className="relative z-10 text-center text-white section-padding container-max">
           <motion.div

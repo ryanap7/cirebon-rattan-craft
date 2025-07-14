@@ -57,31 +57,35 @@
     --chart-4: 35 65% 60%;
     --chart-5: 15 75% 55%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
-  
-  /* Custom scrollbar */
+
+  /* Scrollbar Styling */
   ::-webkit-scrollbar {
     width: 8px;
   }
-  
+
   ::-webkit-scrollbar-track {
     @apply bg-cream-100;
   }
-  
+
   ::-webkit-scrollbar-thumb {
     @apply bg-wood-400 rounded-full;
   }
-  
+
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-wood-500;
+  }
+
+  /* Accessibility Focus */
+  .focus-visible {
+    @apply outline-2 outline-offset-2 outline-wood-500;
   }
 }
 
@@ -89,40 +93,33 @@
   .btn-primary {
     @apply bg-wood-600 hover:bg-wood-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-warm hover:shadow-lg hover:scale-105;
   }
-  
+
   .btn-secondary {
     @apply bg-forest-600 hover:bg-forest-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-soft hover:shadow-lg hover:scale-105;
   }
-  
+
   .btn-accent {
     @apply bg-gold-500 hover:bg-gold-600 text-wood-900 font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-gold hover:shadow-lg hover:scale-105;
   }
-  
+
   .text-gradient {
     @apply bg-gradient-to-r from-wood-600 to-gold-600 bg-clip-text text-transparent;
   }
-  
+
   .card-hover {
     @apply transition-all duration-300 hover:shadow-warm hover:-translate-y-1;
   }
-  
+
   .section-padding {
     @apply px-4 sm:px-6 lg:px-8;
   }
-  
+
   .container-max {
     @apply max-w-7xl mx-auto;
   }
 }
 
-/* Smooth scrolling */
+/* Global Settings */
 html {
   scroll-behavior: smooth;
-}
-
-/* Focus styles for accessibility */
-@layer base {
-  .focus-visible {
-    @apply outline-2 outline-offset-2 outline-wood-500;
-  }
 }
