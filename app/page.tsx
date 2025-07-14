@@ -757,43 +757,41 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* <div className="p-6">
-                    <div className="flex items-center text-sm text-wood-800 mb-3">
-                      <Calendar className="h-4 w-4 mr-2" />
-                      <span>
-                        {post.publishedAt
-                          ? new Date(post.publishedAt).toLocaleDateString()
-                          : "Unknown Date"}
+                <div className="p-6">
+                  <div className="flex items-center text-sm text-wood-800 mb-3">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    <span>
+                      {new Date(post.publishedAt).toLocaleDateString()}
+                    </span>
+                    <span className="mx-2">•</span>
+                    <span>{post.readTime}</span>
+                  </div>
+
+                  {/* <h3 className="text-xl font-semibold text-wood-900 mb-3 line-clamp-2">
+                    {post.title}
+                  </h3>
+
+                  <p className="text-wood-700 mb-4 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+
+                  <div className="flex justify-between items-center">
+                    <div className="flex items-center">
+                      <div className="w-8 h-8 bg-wood-200 rounded-full mr-3"></div>
+                      <span className="text-sm text-wood-800">
+                        {post.author?.name ?? "Anonymous"}
                       </span>
-                      <span className="mx-2">•</span>
-                      <span>{post.readTime}</span>
                     </div>
-
-                    <h3 className="text-xl font-semibold text-wood-900 mb-3 line-clamp-2">
-                      {post.title}
-                    </h3>
-
-                    <p className="text-wood-700 mb-4 line-clamp-3">
-                      {post.excerpt}
-                    </p>
-
-                    <div className="flex justify-between items-center">
-                      <div className="flex items-center">
-                        <div className="w-8 h-8 bg-wood-200 rounded-full mr-3"></div>
-                        <span className="text-sm text-wood-800">
-                          {post.author?.name ?? "Anonymous"}
-                        </span>
-                      </div>
-                      <Link
-                        href={`/blog/${post.slug ?? "unknown-slug"}`}
-                        className="text-wood-900 hover:text-gold-600 font-medium text-sm inline-flex items-center"
-                        aria-label={`Read article about ${post.title}`}
-                      >
-                        Read Article
-                        <ArrowRight className="ml-1 h-4 w-4" />
-                      </Link>
-                    </div>
+                    <Link
+                      href={`/blog/${post.slug ?? "unknown-slug"}`}
+                      className="text-wood-900 hover:text-gold-600 font-medium text-sm inline-flex items-center"
+                      aria-label={`Read article about ${post.title}`}
+                    >
+                      Read Article
+                      <ArrowRight className="ml-1 h-4 w-4" />
+                    </Link>
                   </div> */}
+                </div>
               </motion.article>
             ))}
           </div>
