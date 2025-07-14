@@ -200,7 +200,7 @@ export default function ProductsPage() {
   }, [selectedCategory, searchQuery, sortBy, priceRange])
 
   return (
-    <div className="min-h-screen pt-20 bg-cream-50">
+    <div className="min-h-screen mt-16 lg:mt-20 bg-cream-50">
       {/* Hero Section */}
       <section className="relative py-20 bg-hero-gradient overflow-hidden">
         <div className="absolute inset-0 bg-black/40"></div>

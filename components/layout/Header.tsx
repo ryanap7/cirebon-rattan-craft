@@ -93,14 +93,16 @@ export default function Header() {
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
             className="h-full max-h-[80px] w-auto flex items-center"
           >
-            <Image
-              src="/assets/logo.webp"
-              alt="Cirebon Rattan Craft Logo"
-              width={180}
-              height={60}
-              priority
-              className="h-full w-auto object-contain"
-            />
+            <Link href={'/'} className="h-full w-auto object-contain">
+              <Image
+                src="/assets/logo.webp"
+                alt="Cirebon Rattan Craft Logo"
+                width={180}
+                height={60}
+                priority
+                className="h-full w-auto object-contain"
+              />
+            </Link>
           </motion.div>
 
           {/* Desktop Navigation */}

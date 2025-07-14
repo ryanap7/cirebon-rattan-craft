@@ -239,7 +239,7 @@ const testimonials = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-[100vw] overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden bg-hero-gradient">
         <div className="absolute inset-0 bg-black/30 z-10" />
@@ -252,7 +252,7 @@ export default function Home() {
           className="object-cover object-center z-0"
         />
 
-        <div className="relative z-10 text-center text-white section-padding container-max">
+        <div className="w-[100vw] overflow-x-hidden relative z-10 text-center text-white section-padding container-max">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}

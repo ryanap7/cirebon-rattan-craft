@@ -34,7 +34,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen mt-16 lg:mt-20">
       {/* Hero Section */}
       <section className="relative py-20 bg-hero-gradient overflow-hidden">
         <div className="absolute inset-0 bg-black/40"></div>
