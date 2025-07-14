@@ -110,9 +110,9 @@ const products = [
     category: 'decorative',
     slug: 'decorative-rattan-baskets-set',
     price: { min: 120, max: 200 },
-    image: 'https://images.pexels.com/photos/1571464/pexels-photo-1571464.jpeg',
+    image: 'https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg',
     gallery: [
-      'https://images.pexels.com/photos/1571464/pexels-photo-1571464.jpeg',
+      'https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg',
       'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg'
     ],
     description: 'Set of 3 handwoven decorative baskets in different sizes',
@@ -391,7 +391,7 @@ export default function ProductsPage() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className={
                 viewMode === 'grid'
-                  ? 'grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8'
+                  ? 'grid grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-3'
                   : 'space-y-6'
               }
             >
@@ -402,41 +402,44 @@ export default function ProductsPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
                   className={`bg-white rounded-xl overflow-hidden shadow-soft card-hover ${
-                    viewMode === 'list' ? 'flex' : ''
+                    viewMode === 'list' ? 'flex-col md:flex-row flex' : ''
                   }`}
                 >
-                  <div className={`relative ${viewMode === 'list' ? 'w-80 flex-shrink-0' : 'h-64'} overflow-hidden`}>
+                  <div className={`relative ${viewMode === 'list' ? 'md:flex w-full flex-shrink-0 h-64' : 'h-48'} overflow-hidden`}>
                     <Image
                       src={product.image}
                       alt={product.name}
                       fill
-                      className="object-cover transition-transform duration-300 hover:scale-110"
+                      className={`${viewMode === 'grid' ? 'h-full w-100% object-cover' : 'flex object-cover'} transition-transform duration-300 hover:scale-110`}
                     />
-                    <div className="absolute top-4 left-4 flex gap-2">
+                    <div className={`absolute ${viewMode === 'list' ? 'top-4 left-4' : 'top-2 left-2 md:top-4 md:left-4'} flex gap-2`}>
                       {product.featured && (
-                        <span className="bg-gold-500 text-wood-900 px-3 py-1 rounded-full text-sm font-semibold">
+                        <span className={`bg-gold-500 text-wood-900 px-3 py-1 rounded-full ${viewMode === 'list' ? 'text-sm' : 'text-xs md:text-sm'} font-semibold`}>
                           Featured
                         </span>
                       )}
                       {!product.inStock && (
-                        <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                          Out of Stock
+                        // <span className={`bg-red-500 text-white px-3 py-1 rounded-full ${viewMode === 'list' ? 'text-sm' : 'text-xs md:text-sm'} font-semibold`}>
+                        //   Out of Stock
+                        // </span>
+                        <span className={`bg-red-500 text-white px-3 py-1 rounded-full ${viewMode === 'list' ? 'text-sm' : 'text-xs md:text-sm'} font-semibold`}>
+                          Out-Stock
                         </span>
                       )}
                     </div>
-                    <div className="absolute top-4 right-4 flex gap-2">
-                      <button className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors duration-200">
+                    <div className={`absolute ${viewMode === 'list' ? 'top-4 right-4' : 'top-2 right-2 md:top-4 md:right-4'} flex gap-2`}>
+                      <button className={`${viewMode === 'list' ? 'w-10 h-10' : 'p-1 w-6 h-6 md:w-10 md:h-10'} bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors duration-200`}>
                         <Heart className="h-5 w-5 text-wood-600" />
                       </button>
-                      <button className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors duration-200">
+                      <button className={`${viewMode === 'list' ? 'w-10 h-10' : 'p-1 w-6 h-6 md:w-10 md:h-10'} bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors duration-200`}>
                         <Eye className="h-5 w-5 text-wood-600" />
                       </button>
                     </div>
                   </div>
                   
-                  <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>
-                    <div className="flex items-center mb-2">
-                      <div className="flex items-center">
+                  <div className={`${viewMode === 'list' ? 'flex-1 p-6' : 'md:p-4 p-2 pb-3'}`}>
+                    <div className={`${viewMode === 'grid' ? 'flex-col' : 'flex'} items-center mb-2`}>
+                      <div className={`${viewMode === 'list' ? 'flex' : 'hidden md:flex'} items-center`}>
                         {[...Array(5)].map((_, i) => (
                           <Star
                             key={i}
@@ -448,41 +451,66 @@ export default function ProductsPage() {
                           />
                         ))}
                       </div>
-                      <span className="text-sm text-wood-600 ml-2">
+                      <span className={`text-sm text-wood-600 ${viewMode === 'grid' ? '' : 'ml-2'}`}>
                         {product.rating} ({product.reviews} reviews)
                       </span>
                     </div>
                     
-                    <h3 className="text-xl font-semibold text-wood-900 mb-2">{product.name}</h3>
-                    <p className="text-wood-600 mb-4 text-sm line-clamp-2">{product.description}</p>
+                    <h3 className={`${viewMode === 'grid' ? 'text-[90%] md:w-full w-[90%]' : 'text-xl'} font-semibold text-wood-900 mb-2`}>{product.name}</h3>
+                    <p className={`${viewMode === 'list' ? '' : 'hidden md:flex'} min-h-[60px] text-wood-600 mb-4 text-sm line-clamp-2`}>{product.description}</p>
                     
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <div className={`${viewMode === 'list' ? 'hidden md:flex flex-wrap gap-2' : 'hidden md:flex w-max md:w-full gap-2 md:flex-wrap'} mb-4`}>
                       {product.features.slice(0, 3).map((feature, idx) => (
                         <span
                           key={idx}
-                          className="px-2 py-1 bg-forest-100 text-forest-700 text-xs rounded-full"
+                          className="w-max max-w-[47%] px-3 py-1 bg-forest-100 text-forest-700 text-xs text-ellipsis whitespace-nowrap overflow-hidden rounded-full"
                         >
                           {feature}
                         </span>
                       ))}
                     </div>
                     
-                    <div className="flex justify-between items-center">
-                      <div>
-                        <span className="text-2xl font-bold text-forest-600">
+                    <div className={`${viewMode === 'list' ? 'flex-wrap md:hidden' : 'md:hidden w-max md:w-full gap-2 md:flex-wrap'} mb-4`}>
+                      {product.features.slice(0, 1).map((feature, idx) => (
+                        <span
+                          key={idx}
+                          className="w-max max-w-[100%] px-3 py-1 bg-forest-100 text-forest-700 text-xs text-ellipsis whitespace-nowrap overflow-hidden rounded-full"
+                        >
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
+                    
+                    <div className={`${viewMode === 'list' ? 'flex items-center md:justify-end gap-3 justify-between flex-row md:flex-row-reverse' : 'flex md:flex-col justify-between'}`}>
+                      <div className={`${viewMode === 'list' ? 'mb-0' : 'mb-0 md:mb-2'}`}>
+                        <span className={`${viewMode === 'list' ? 'text-[90%] md:text-2xl' : 'text-[90%]'} font-bold text-forest-600`}>
                           ${product.price.min.toLocaleString()}
                         </span>
                         {product.price.min !== product.price.max && (
-                          <span className="text-wood-600 text-sm ml-1">
+                          <span className={`text-wood-600 ${viewMode === 'list' ? '' : 'md:text-sm text-xs'} ml-1`}>
                             - ${product.price.max.toLocaleString()}
                           </span>
                         )}
                       </div>
+                      <div className={`${viewMode === 'list' ? 'hidden' : 'relative md:top-0 top-[1.3px] flex md:hidden'} flex items-center`}>
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className={`h-2.5 w-2.5 ${
+                              i < Math.floor(product.rating)
+                                ? 'text-gold-500 fill-current'
+                                : 'text-cream-300'
+                            }`}
+                          />
+                        ))}
+                      </div>
                       <Link
                         href={`/products/${product.category}/${product.slug}`}
-                        className="btn-primary text-sm inline-flex items-center"
+                        className={`${viewMode === 'list' ? 'flex items-center text-xs px-3' : 'hidden md:flex text-sm'} btn-primary inline-flex items-center`}
                       >
-                        View Details
+                        <p className='flex w-max'>
+                          View Details
+                        </p>
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </div>
