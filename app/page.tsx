@@ -155,6 +155,26 @@ const blogPosts = [
     tags: ["trends", "design", "2024", "interior"],
     featured: true,
   },
+  {
+    id: 4,
+    title: "2024 Rattan Furniture Trends: What's Hot This Year",
+    slug: "traditional-rattan-weaving-techniques-cirebon",
+    excerpt:
+      "Explore the latest trends in rattan furniture design for 2024. From color palettes to innovative weaving patterns, discover what's shaping the industry this year.",
+    content: "Full article content would go here...",
+    image: "https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg",
+    category: "design-trends",
+    author: {
+      name: "Maya Design Studio",
+      avatar:
+        "https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg",
+      bio: "Interior design expert specializing in natural materials",
+    },
+    publishedAt: "1/15/2024",
+    readTime: "10 min read",
+    tags: ["trends", "design", "2024", "interior"],
+    featured: true,
+  },
 ];
 
 const testimonials = [
@@ -179,7 +199,6 @@ const testimonials = [
 ];
 
 export default function Home() {
-  const featuredPosts = blogPosts.filter((post) => post.featured);
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -734,7 +753,7 @@ export default function Home() {
             </p>
           </motion.div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {featuredPosts.map((post, index) => (
+            {blogPosts.map((post, index) => (
               <motion.article
                 key={post.id}
                 initial={{ opacity: 0, y: 30 }}
