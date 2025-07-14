@@ -264,10 +264,12 @@ export default function Home() {
               >
                 <div className="relative h-64 overflow-hidden">
                   <Image
-                    src={product.image}
+                    src={`${product.image}?auto=compress&cs=tinysrgb&w=384&h=256`}
                     alt={product.name}
-                    fill
-                    className="object-cover transition-transform duration-300 hover:scale-110"
+                    width={384}
+                    height={256}
+                    className="object-cover w-full h-auto transition-transform duration-300 hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, 384px"
                   />
                   {product.features && (
                     <div className="absolute top-4 left-4">
