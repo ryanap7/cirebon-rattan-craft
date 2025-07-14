@@ -1,21 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
-import Image from "next/image";
 import {
   ArrowRight,
-  Star,
-  Globe,
-  Truck,
-  Shield,
   Award,
-  Heart,
-  Users,
-  Leaf,
-  Factory,
   Calendar,
+  Factory,
+  Globe,
+  Heart,
+  Leaf,
+  Shield,
+  Star,
+  Users,
 } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 const featuredProducts = [
   {
@@ -162,12 +161,52 @@ const blogPosts = [
     excerpt:
       "Explore the latest trends in rattan furniture design for 2024. From color palettes to innovative weaving patterns, discover what's shaping the industry this year.",
     content: "Full article content would go here...",
-    image: "https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg",
+    image: "https://images.pexels.com/photos/1571464/pexels-photo-1571464.jpeg",
     category: "design-trends",
     author: {
       name: "Maya Design Studio",
       avatar:
-        "https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg",
+        "https://images.pexels.com/photos/1571464/pexels-photo-1571464.jpeg",
+      bio: "Interior design expert specializing in natural materials",
+    },
+    publishedAt: "1/15/2024",
+    readTime: "10 min read",
+    tags: ["trends", "design", "2024", "interior"],
+    featured: true,
+  },
+  {
+    id: 5,
+    title: "2024 Rattan Furniture Trends: What's Hot This Year",
+    slug: "traditional-rattan-weaving-techniques-cirebon",
+    excerpt:
+      "Explore the latest trends in rattan furniture design for 2024. From color palettes to innovative weaving patterns, discover what's shaping the industry this year.",
+    content: "Full article content would go here...",
+    image: "https://images.pexels.com/photos/15714635pexels-photo-15714635jpeg",
+    category: "design-trends",
+    author: {
+      name: "Maya Design Studio",
+      avatar:
+        "https://images.pexels.com/photos/15714635pexels-photo-15714635jpeg",
+      bio: "Interior design expert specializing in natural materials",
+    },
+    publishedAt: "1/15/2024",
+    readTime: "10 min read",
+    tags: ["trends", "design", "2024", "interior"],
+    featured: true,
+  },
+  {
+    id: 6,
+    title: "2024 Rattan Furniture Trends: What's Hot This Year",
+    slug: "traditional-rattan-weaving-techniques-cirebon",
+    excerpt:
+      "Explore the latest trends in rattan furniture design for 2024. From color palettes to innovative weaving patterns, discover what's shaping the industry this year.",
+    content: "Full article content would go here...",
+    image: "https://images.pexels.com/photos/15714636pexels-photo-15714636jpeg",
+    category: "design-trends",
+    author: {
+      name: "Maya Design Studio",
+      avatar:
+        "https://images.pexels.com/photos/15714636pexels-photo-15714636jpeg",
       bio: "Interior design expert specializing in natural materials",
     },
     publishedAt: "1/15/2024",
@@ -811,6 +850,19 @@ export default function Home() {
               </motion.article>
             ))}
           </div>
+
+          <motion.div
+            className="text-center mt-12"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <Link href="/blog" className="btn-primary inline-flex items-center">
+              View All Articles
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </motion.div>
         </div>
       </section>
 
