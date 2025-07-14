@@ -120,13 +120,12 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden bg-hero-gradient">
         <div className="absolute inset-0 bg-black/30 z-10" />
-        {/* Optimized Background */}
         <Image
-          src="https://images.pexels.com/photos/6969835/pexels-photo-6969835.jpeg?w=1920&auto=compress&cs=tinysrgb&fm=webp"
-          alt="Hero Background"
+          src="https://images.pexels.com/photos/6969835/pexels-photo-6969835.jpeg?w=1920&auto=compress&cs=tinysrgb"
+          alt="Cirebon Rattan Craft"
           fill
           priority
-          sizes="100vw"
+          sizes="(max-width: 768px) 100vw, 1920px"
           className="object-cover object-center z-0"
         />
 

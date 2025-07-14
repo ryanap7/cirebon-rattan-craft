@@ -69,7 +69,7 @@ export default function RootLayout({
         />
         <link rel="dns-prefetch" href="https://images.pexels.com" />
 
-        {/* Preconnect ke Google Fonts (sudah digunakan oleh next/font) */}
+        {/* Preconnect ke Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
