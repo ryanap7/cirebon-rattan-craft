@@ -264,7 +264,7 @@ export default function Home() {
               >
                 <div className="relative h-64 overflow-hidden">
                   <Image
-                    src={`${product.image}?auto=compress&cs=tinysrgb&w=512&h=384`}
+                    src={product.image}
                     alt={product.name}
                     fill
                     sizes="(max-width: 768px) 100vw, 25vw"
@@ -510,7 +510,7 @@ export default function Home() {
               >
                 <div className="relative h-48 rounded-xl overflow-hidden mb-6">
                   <Image
-                    src={`${process.image}?auto=compress&cs=tinysrgb&w=768&h=288`}
+                    src={process.image}
                     alt={process.title}
                     fill
                     className="object-cover"
