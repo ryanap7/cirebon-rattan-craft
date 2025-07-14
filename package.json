@@ -70,5 +70,13 @@
     "typescript": "5.2.2",
     "vaul": "^0.9.9",
     "zod": "^3.25.76"
-  }
+  },
+  "browserslist": [
+    "defaults and supports es6-module",
+    "not IE 11",
+    "last 2 Chrome versions",
+    "last 2 Edge versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions"
+  ]
 }
