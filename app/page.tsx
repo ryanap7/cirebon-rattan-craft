@@ -715,7 +715,7 @@ export default function Home() {
       </section>
 
       {/* Blog */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="container-max section-padding">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -797,7 +797,7 @@ export default function Home() {
               ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 bg-forest-gradient relative overflow-hidden">
