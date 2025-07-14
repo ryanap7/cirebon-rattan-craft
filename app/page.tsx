@@ -734,66 +734,67 @@ export default function Home() {
             </p>
           </motion.div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {featuredPosts.map((post, index) => (
-              <motion.article
-                key={post.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                className="bg-white rounded-xl overflow-hidden shadow-soft card-hover"
-              >
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-300 hover:scale-110"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-gold-500 text-wood-900 px-3 py-1 rounded-full text-sm font-semibold">
-                      Featured
-                    </span>
-                  </div>
-                </div>
-
-                <div className="p-6">
-                  <div className="flex items-center text-sm text-wood-800 mb-3">
-                    <Calendar className="h-4 w-4 mr-2" />
-                    <span>
-                      {new Date(post.publishedAt).toLocaleDateString()}
-                    </span>
-                    <span className="mx-2">•</span>
-                    <span>{post.readTime}</span>
-                  </div>
-
-                  <h3 className="text-xl font-semibold text-wood-900 mb-3 line-clamp-2">
-                    {post.title}
-                  </h3>
-
-                  <p className="text-wood-700 mb-4 line-clamp-3">
-                    {post.excerpt}
-                  </p>
-
-                  <div className="flex justify-between items-center">
-                    <div className="flex items-center">
-                      <div className="w-8 h-8 bg-wood-200 rounded-full mr-3"></div>
-                      <span className="text-sm text-wood-800">
-                        {post.author.name}
+            {Array.isArray(featuredPosts) &&
+              featuredPosts.map((post, index) => (
+                <motion.article
+                  key={post.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.6 }}
+                  className="bg-white rounded-xl overflow-hidden shadow-soft card-hover"
+                >
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-300 hover:scale-110"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-gold-500 text-wood-900 px-3 py-1 rounded-full text-sm font-semibold">
+                        Featured
                       </span>
                     </div>
-                    <Link
-                      href={`/blog/${post.slug}`}
-                      className="text-wood-900 hover:text-gold-600 font-medium text-sm inline-flex items-center"
-                      aria-label={`Read article about ${post.title}`}
-                    >
-                      Read Article
-                      <ArrowRight className="ml-1 h-4 w-4" />
-                    </Link>
                   </div>
-                </div>
-              </motion.article>
-            ))}
+
+                  <div className="p-6">
+                    <div className="flex items-center text-sm text-wood-800 mb-3">
+                      <Calendar className="h-4 w-4 mr-2" />
+                      <span>
+                        {new Date(post.publishedAt).toLocaleDateString()}
+                      </span>
+                      <span className="mx-2">•</span>
+                      <span>{post.readTime}</span>
+                    </div>
+
+                    <h3 className="text-xl font-semibold text-wood-900 mb-3 line-clamp-2">
+                      {post.title}
+                    </h3>
+
+                    <p className="text-wood-700 mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+
+                    <div className="flex justify-between items-center">
+                      <div className="flex items-center">
+                        <div className="w-8 h-8 bg-wood-200 rounded-full mr-3"></div>
+                        <span className="text-sm text-wood-800">
+                          {post.author.name}
+                        </span>
+                      </div>
+                      <Link
+                        href={`/blog/${post.slug}`}
+                        className="text-wood-900 hover:text-gold-600 font-medium text-sm inline-flex items-center"
+                        aria-label={`Read article about ${post.title}`}
+                      >
+                        Read Article
+                        <ArrowRight className="ml-1 h-4 w-4" />
+                      </Link>
+                    </div>
+                  </div>
+                </motion.article>
+              ))}
           </div>
         </div>
       </section>
