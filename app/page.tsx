@@ -269,8 +269,9 @@ export default function Home() {
                     src={`${product.image}?w=384&h=256&auto=compress&cs=tinysrgb&fm=webp`}
                     alt={product.name}
                     fill
-                    sizes="(max-width: 768px) 100vw, 25vw"
-                    className="object-cover transition-transform duration-300 hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    priority={false}
+                    className="object-cover rounded-xl"
                   />
                   {product.features && (
                     <div className="absolute top-4 left-4">
