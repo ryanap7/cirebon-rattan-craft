@@ -14,7 +14,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
         return {
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "Cirebon Rattan Exports",
+          name: "Cirebon Rattan Craft Exports",
           description:
             "Premium handcrafted rattan furniture manufacturer and exporter from Cirebon, Indonesia",
           url: baseUrl,
@@ -64,11 +64,11 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
           image: data.images || [data.image],
           brand: {
             "@type": "Brand",
-            name: "Cirebon Rattan",
+            name: "Cirebon Rattan Craft",
           },
           manufacturer: {
             "@type": "Organization",
-            name: "Cirebon Rattan Exports",
+            name: "Cirebon Rattan Craft Exports",
             address: {
               "@type": "PostalAddress",
               addressLocality: "Cirebon",
@@ -87,7 +87,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
               : "https://schema.org/OutOfStock",
             seller: {
               "@type": "Organization",
-              name: "Cirebon Rattan Exports",
+              name: "Cirebon Rattan Craft Exports",
             },
             priceValidUntil: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000)
               .toISOString()
@@ -118,7 +118,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
           image: data.image,
           author: {
             "@type": "Person",
-            name: data.author?.name || "Cirebon Rattan Team",
+            name: data.author?.name || "Cirebon Rattan Craft Team",
             description: data.author?.bio,
           },
           publisher: {

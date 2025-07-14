@@ -1,63 +1,102 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import Image from 'next/image'
-import { Heart, Users, Leaf, Globe, Award, Shield, Factory, Clock } from 'lucide-react'
+import { motion } from "framer-motion";
+import Image from "next/image";
+import {
+  Heart,
+  Users,
+  Leaf,
+  Globe,
+  Award,
+  Shield,
+  Factory,
+  Clock,
+} from "lucide-react";
 
 const milestones = [
-  { year: '1998', title: 'Company Founded', description: 'Started as a small family business in Cirebon' },
-  { year: '2005', title: 'First Export', description: 'Began exporting to Southeast Asian markets' },
-  { year: '2010', title: 'ISO Certification', description: 'Achieved ISO 9001 quality management certification' },
-  { year: '2015', title: 'Global Expansion', description: 'Expanded to European and American markets' },
-  { year: '2018', title: 'FSC Certification', description: 'Committed to sustainable forestry practices' },
-  { year: '2024', title: '30+ Countries', description: 'Now exporting to over 30 countries worldwide' }
-]
+  {
+    year: "1998",
+    title: "Company Founded",
+    description: "Started as a small family business in Cirebon",
+  },
+  {
+    year: "2005",
+    title: "First Export",
+    description: "Began exporting to Southeast Asian markets",
+  },
+  {
+    year: "2010",
+    title: "ISO Certification",
+    description: "Achieved ISO 9001 quality management certification",
+  },
+  {
+    year: "2015",
+    title: "Global Expansion",
+    description: "Expanded to European and American markets",
+  },
+  {
+    year: "2018",
+    title: "FSC Certification",
+    description: "Committed to sustainable forestry practices",
+  },
+  {
+    year: "2024",
+    title: "30+ Countries",
+    description: "Now exporting to over 30 countries worldwide",
+  },
+];
 
 const values = [
   {
     icon: Heart,
-    title: 'Traditional Craftsmanship',
-    description: 'Preserving centuries-old Indonesian weaving techniques passed down through generations of skilled artisans.'
+    title: "Traditional Craftsmanship",
+    description:
+      "Preserving centuries-old Indonesian weaving techniques passed down through generations of skilled artisans.",
   },
   {
     icon: Leaf,
-    title: 'Environmental Responsibility',
-    description: 'Using sustainably harvested rattan and eco-friendly production processes to protect our environment.'
+    title: "Environmental Responsibility",
+    description:
+      "Using sustainably harvested rattan and eco-friendly production processes to protect our environment.",
   },
   {
     icon: Users,
-    title: 'Community Empowerment',
-    description: 'Supporting local communities by providing fair employment and preserving traditional skills.'
+    title: "Community Empowerment",
+    description:
+      "Supporting local communities by providing fair employment and preserving traditional skills.",
   },
   {
     icon: Globe,
-    title: 'Global Quality Standards',
-    description: 'Meeting international quality and safety standards while maintaining authentic Indonesian character.'
-  }
-]
+    title: "Global Quality Standards",
+    description:
+      "Meeting international quality and safety standards while maintaining authentic Indonesian character.",
+  },
+];
 
 const certifications = [
   {
-    name: 'FSC Certified',
-    description: 'Forest Stewardship Council certification ensures sustainable rattan sourcing',
-    icon: Leaf
+    name: "FSC Certified",
+    description:
+      "Forest Stewardship Council certification ensures sustainable rattan sourcing",
+    icon: Leaf,
   },
   {
-    name: 'ISO 9001:2015',
-    description: 'International quality management system certification',
-    icon: Award
+    name: "ISO 9001:2015",
+    description: "International quality management system certification",
+    icon: Award,
   },
   {
-    name: 'Export License',
-    description: 'Official Indonesian government export license for international trade',
-    icon: Shield
+    name: "Export License",
+    description:
+      "Official Indonesian government export license for international trade",
+    icon: Shield,
   },
   {
-    name: 'SVLK Certified',
-    description: 'Indonesian Timber Legality Verification System compliance',
-    icon: Factory
-  }
-]
+    name: "SVLK Certified",
+    description: "Indonesian Timber Legality Verification System compliance",
+    icon: Factory,
+  },
+];
 
 export default function About() {
   return (
@@ -65,13 +104,14 @@ export default function About() {
       {/* Hero Section */}
       <section className="relative py-20 bg-hero-gradient overflow-hidden">
         <div className="absolute inset-0 bg-black/40"></div>
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg')"
+            backgroundImage:
+              "url('https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg')",
           }}
         ></div>
-        
+
         <div className="relative z-10 container-max section-padding text-center text-white drop-shadow-lg">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -82,8 +122,9 @@ export default function About() {
               Our Story
             </h1>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto font-medium">
-              From a small family workshop to an internationally recognized manufacturer, 
-              discover the passion and craftsmanship behind Cirebon Rattan.
+              From a small family workshop to an internationally recognized
+              manufacturer, discover the passion and craftsmanship behind
+              Cirebon Rattan Craft.
             </p>
           </motion.div>
         </div>
@@ -100,37 +141,48 @@ export default function About() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-wood-900 mb-6">
-                Three Decades of 
+                Three Decades of
                 <span className="text-gradient block">Excellence</span>
               </h2>
               <p className="text-lg text-wood-700 mb-6">
-                Founded in 1998 in the historic city of Cirebon, West Java, our company began as a 
-                small family workshop dedicated to preserving traditional Indonesian rattan weaving 
-                techniques. What started with just three artisans has grown into a thriving business 
-                that employs over 150 skilled craftspeople.
+                Founded in 1998 in the historic city of Cirebon, West Java, our
+                company began as a small family workshop dedicated to preserving
+                traditional Indonesian rattan weaving techniques. What started
+                with just three artisans has grown into a thriving business that
+                employs over 150 skilled craftspeople.
               </p>
               <p className="text-lg text-wood-700 mb-8">
-                Today, we're proud to be one of Indonesia's leading rattan furniture exporters, 
-                shipping our handcrafted pieces to over 30 countries worldwide. Despite our growth, 
-                we remain committed to the same principles that founded our company: quality 
-                craftsmanship, sustainable practices, and respect for traditional techniques.
+                Today, we're proud to be one of Indonesia's leading rattan
+                furniture exporters, shipping our handcrafted pieces to over 30
+                countries worldwide. Despite our growth, we remain committed to
+                the same principles that founded our company: quality
+                craftsmanship, sustainable practices, and respect for
+                traditional techniques.
               </p>
-              
+
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-wood-900 mb-2">25+</div>
+                  <div className="text-3xl font-bold text-wood-900 mb-2">
+                    25+
+                  </div>
                   <div className="text-wood-600">Years Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-wood-900 mb-2">150+</div>
+                  <div className="text-3xl font-bold text-wood-900 mb-2">
+                    150+
+                  </div>
                   <div className="text-wood-600">Skilled Artisans</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-wood-900 mb-2">30+</div>
+                  <div className="text-3xl font-bold text-wood-900 mb-2">
+                    30+
+                  </div>
                   <div className="text-wood-600">Export Countries</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-wood-900 mb-2">10K+</div>
+                  <div className="text-3xl font-bold text-wood-900 mb-2">
+                    10K+
+                  </div>
                   <div className="text-wood-600">Happy Customers</div>
                 </div>
               </div>
@@ -179,8 +231,8 @@ export default function About() {
               Our Journey
             </h2>
             <p className="text-xl text-wood-700 max-w-3xl mx-auto">
-              Key milestones that shaped our company and established our reputation 
-              as a trusted rattan furniture manufacturer.
+              Key milestones that shaped our company and established our
+              reputation as a trusted rattan furniture manufacturer.
             </p>
           </motion.div>
 
@@ -198,7 +250,9 @@ export default function About() {
                   {milestone.year}
                 </div>
                 <div className="flex-grow">
-                  <h3 className="text-xl font-semibold text-wood-900 mb-2">{milestone.title}</h3>
+                  <h3 className="text-xl font-semibold text-wood-900 mb-2">
+                    {milestone.title}
+                  </h3>
                   <p className="text-wood-700">{milestone.description}</p>
                 </div>
               </motion.div>
@@ -221,8 +275,8 @@ export default function About() {
               Our Values
             </h2>
             <p className="text-xl text-wood-700 max-w-3xl mx-auto">
-              The principles that guide everything we do, from sourcing materials 
-              to crafting the final product.
+              The principles that guide everything we do, from sourcing
+              materials to crafting the final product.
             </p>
           </motion.div>
 
@@ -240,7 +294,9 @@ export default function About() {
                   <value.icon className="h-8 w-8 text-forest-600" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-wood-900 mb-3">{value.title}</h3>
+                  <h3 className="text-xl font-semibold text-wood-900 mb-3">
+                    {value.title}
+                  </h3>
                   <p className="text-wood-700">{value.description}</p>
                 </div>
               </motion.div>
@@ -263,8 +319,8 @@ export default function About() {
               Quality Certifications
             </h2>
             <p className="text-xl text-wood-700 max-w-3xl mx-auto">
-              Our commitment to quality and sustainability is backed by internationally 
-              recognized certifications and standards.
+              Our commitment to quality and sustainability is backed by
+              internationally recognized certifications and standards.
             </p>
           </motion.div>
 
@@ -281,7 +337,9 @@ export default function About() {
                 <div className="w-16 h-16 bg-gold-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <cert.icon className="h-8 w-8 text-gold-600" />
                 </div>
-                <h3 className="font-semibold text-wood-900 mb-3">{cert.name}</h3>
+                <h3 className="font-semibold text-wood-900 mb-3">
+                  {cert.name}
+                </h3>
                 <p className="text-wood-700 text-sm">{cert.description}</p>
               </motion.div>
             ))}
@@ -303,13 +361,11 @@ export default function About() {
               Partner with Us
             </h2>
             <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-              Join the hundreds of satisfied customers worldwide who trust us for 
-              premium rattan furniture. Let's discuss your project requirements.
+              Join the hundreds of satisfied customers worldwide who trust us
+              for premium rattan furniture. Let's discuss your project
+              requirements.
             </p>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <a
                 href="/contact"
                 className="bg-white text-forest-900 hover:bg-cream-50 font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center"
@@ -322,5 +378,5 @@ export default function About() {
         </div>
       </section>
     </div>
-  )
+  );
 }

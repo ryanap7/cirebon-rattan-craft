@@ -75,7 +75,7 @@ export default function Footer() {
                 href="/"
                 className="text-3xl font-serif font-bold text-gold-400 mb-6 block"
               >
-                Cirebon Rattan
+                Cirebon Rattan Craft
               </Link>
               <p className="text-cream-200 mb-6 leading-relaxed">
                 Premium Indonesian rattan furniture manufacturer and exporter
@@ -113,7 +113,7 @@ export default function Footer() {
                   href="https://facebook.com/cirebonrattan"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Kunjungi Facebook Cirebon Rattan"
+                  aria-label="Kunjungi Facebook Cirebon Rattan Craft"
                   className="w-10 h-10 bg-wood-700 rounded-full flex items-center justify-center hover:bg-gold-600 transition-colors duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
@@ -124,7 +124,7 @@ export default function Footer() {
                   href="https://instagram.com/cirebonrattan"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Kunjungi Instagram Cirebon Rattan"
+                  aria-label="Kunjungi Instagram Cirebon Rattan Craft"
                   className="w-10 h-10 bg-wood-700 rounded-full flex items-center justify-center hover:bg-gold-600 transition-colors duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
@@ -274,8 +274,8 @@ export default function Footer() {
               viewport={{ once: true }}
               className="text-cream-300 text-sm mb-4 md:mb-0"
             >
-              © 2024 Cirebon Rattan Exports. All rights reserved. | Premium
-              Indonesian Rattan Furniture Manufacturer
+              © 2024 Cirebon Rattan Craft Exports. All rights reserved. |
+              Premium Indonesian Rattan Furniture Manufacturer
             </motion.p>
             <motion.div
               initial={{ opacity: 0 }}

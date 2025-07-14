@@ -1,19 +1,20 @@
-import { Metadata } from 'next'
-import { notFound } from 'next/navigation'
-import BlogPostPage from './BlogPostPage'
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
+import BlogPostPage from "./BlogPostPage";
 
 // Mock blog post data - in real app, this would come from CMS/API
 const posts = {
-  'traditional-rattan-weaving-techniques-cirebon': {
+  "traditional-rattan-weaving-techniques-cirebon": {
     id: 1,
-    title: 'Traditional Rattan Weaving Techniques from Cirebon',
-    slug: 'traditional-rattan-weaving-techniques-cirebon',
-    excerpt: 'Discover the ancient art of rattan weaving that has been passed down through generations in Cirebon, West Java.',
+    title: "Traditional Rattan Weaving Techniques from Cirebon",
+    slug: "traditional-rattan-weaving-techniques-cirebon",
+    excerpt:
+      "Discover the ancient art of rattan weaving that has been passed down through generations in Cirebon, West Java.",
     content: `
       <p>The art of rattan weaving in Cirebon, West Java, represents one of Indonesia's most treasured traditional crafts. For centuries, skilled artisans have perfected techniques that transform raw rattan into beautiful, functional furniture pieces that are now sought after worldwide.</p>
 
-      <h2>The History of Cirebon Rattan Craftsmanship</h2>
-      <p>Cirebon's relationship with rattan craftsmanship dates back over 300 years. The region's strategic location and abundant natural resources made it an ideal center for developing sophisticated weaving techniques. Local artisans developed unique patterns and methods that distinguished Cirebon rattan work from other Indonesian regions.</p>
+      <h2>The History of Cirebon Rattan Craft Craftsmanship</h2>
+      <p>Cirebon's relationship with rattan craftsmanship dates back over 300 years. The region's strategic location and abundant natural resources made it an ideal center for developing sophisticated weaving techniques. Local artisans developed unique patterns and methods that distinguished Cirebon rattan craft work from other Indonesian regions.</p>
 
       <h2>Traditional Weaving Techniques</h2>
       <p>The traditional weaving process begins with careful selection of rattan canes. Master craftsmen can identify the best quality rattan by touch, examining factors like flexibility, strength, and natural color variations.</p>
@@ -53,23 +54,25 @@ const posts = {
 
       <p>The traditional rattan weaving techniques of Cirebon represent more than just a manufacturing process—they embody centuries of cultural heritage, artistic expression, and sustainable craftsmanship that continues to inspire furniture makers worldwide.</p>
     `,
-    image: 'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg',
-    category: 'craftsmanship',
+    image: "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg",
+    category: "craftsmanship",
     author: {
-      name: 'Sari Wijaya',
-      avatar: 'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg',
-      bio: 'Master craftsperson and cultural heritage expert with over 20 years of experience documenting traditional Indonesian crafts.'
+      name: "Sari Wijaya",
+      avatar:
+        "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg",
+      bio: "Master craftsperson and cultural heritage expert with over 20 years of experience documenting traditional Indonesian crafts.",
     },
-    publishedAt: '2024-01-15',
-    readTime: '8 min read',
-    tags: ['craftsmanship', 'tradition', 'cirebon', 'weaving', 'heritage'],
-    featured: true
+    publishedAt: "2024-01-15",
+    readTime: "8 min read",
+    tags: ["craftsmanship", "tradition", "cirebon", "weaving", "heritage"],
+    featured: true,
   },
-  'how-to-clean-maintain-rattan-furniture': {
+  "how-to-clean-maintain-rattan-furniture": {
     id: 2,
-    title: 'How to Clean and Maintain Your Rattan Furniture',
-    slug: 'how-to-clean-maintain-rattan-furniture',
-    excerpt: 'Keep your rattan furniture looking beautiful for years with these expert care tips.',
+    title: "How to Clean and Maintain Your Rattan Furniture",
+    slug: "how-to-clean-maintain-rattan-furniture",
+    excerpt:
+      "Keep your rattan furniture looking beautiful for years with these expert care tips.",
     content: `
       <p>Proper care and maintenance are essential for preserving the beauty and longevity of your rattan furniture. With the right techniques and regular attention, your rattan pieces can maintain their elegance for decades.</p>
 
@@ -179,66 +182,69 @@ const posts = {
 
       <p>With proper care and maintenance, your rattan furniture will continue to provide beauty and comfort for many years, making it a worthwhile investment in your home's aesthetic and functionality.</p>
     `,
-    image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg',
-    category: 'care-maintenance',
+    image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
+    category: "care-maintenance",
     author: {
-      name: 'Ahmad Furniture Care',
-      avatar: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg',
-      bio: 'Furniture care specialist with 15 years experience in maintaining and restoring rattan furniture.'
+      name: "Ahmad Furniture Care",
+      avatar:
+        "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
+      bio: "Furniture care specialist with 15 years experience in maintaining and restoring rattan furniture.",
     },
-    publishedAt: '2024-01-12',
-    readTime: '6 min read',
-    tags: ['maintenance', 'care', 'cleaning', 'tips', 'preservation'],
-    featured: false
-  }
-}
+    publishedAt: "2024-01-12",
+    readTime: "6 min read",
+    tags: ["maintenance", "care", "cleaning", "tips", "preservation"],
+    featured: false,
+  },
+};
 
 const getBlogPost = (slug: string) => {
-  return posts[slug as keyof typeof posts]
-}
+  return posts[slug as keyof typeof posts];
+};
 
 type Props = {
-  params: { slug: string }
-}
+  params: { slug: string };
+};
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = getBlogPost(params.slug)
+  const post = getBlogPost(params.slug);
 
   if (!post) {
     return {
-      title: 'Blog Post Not Found',
-    }
+      title: "Blog Post Not Found",
+    };
   }
 
   return {
-    title: `${post.title} | Cirebon Rattan Blog`,
+    title: `${post.title} | Cirebon Rattan Craft Blog`,
     description: post.excerpt,
-    keywords: `${post.tags.join(', ')}, rattan furniture blog, indonesian craftsmanship, furniture care`,
+    keywords: `${post.tags.join(
+      ", "
+    )}, rattan furniture blog, indonesian craftsmanship, furniture care`,
     openGraph: {
       title: post.title,
       description: post.excerpt,
       images: [post.image],
-      type: 'article',
+      type: "article",
       publishedTime: post.publishedAt,
       authors: [post.author.name],
-      locale: 'en_US',
+      locale: "en_US",
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
       images: [post.image],
     },
-  }
+  };
 }
 
 export async function generateStaticParams() {
-  return Object.keys(posts).map((slug) => ({ slug }))
+  return Object.keys(posts).map((slug) => ({ slug }));
 }
 
 export default function BlogPostPageWrapper({ params }: Props) {
-  const post = getBlogPost(params.slug)
+  const post = getBlogPost(params.slug);
 
-  if (!post) notFound()
-  return <BlogPostPage post={post} />
+  if (!post) notFound();
+  return <BlogPostPage post={post} />;
 }

@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   description:
     "Discover handcrafted Indonesian rattan furniture from Cirebon. Premium quality, sustainable materials, direct manufacturer pricing. Export worldwide with traditional craftsmanship meets modern design.",
   keywords:
-    "rattan furniture export indonesia, cirebon rattan furniture manufacturer, handcrafted indonesian rattan, sustainable furniture wholesale, premium rattan dining sets",
-  authors: [{ name: "Cirebon Rattan Exports" }],
+    "rattan furniture export indonesia, cirebon rattan craft furniture manufacturer, handcrafted indonesian rattan, sustainable furniture wholesale, premium rattan dining sets",
+  authors: [{ name: "Ryan Aprianto" }],
   openGraph: {
     title: "Premium Rattan Furniture Export from Cirebon, Indonesia",
     description:
@@ -60,6 +60,9 @@ export default function RootLayout({
       <head>
         {/* SEO & Canonical */}
         <link rel="canonical" href="https://cirebonrattan.com" />
+
+        {/* Favicon */}
+        <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
 
         {/* Preconnect ke Pexels (image CDN) */}
         <link

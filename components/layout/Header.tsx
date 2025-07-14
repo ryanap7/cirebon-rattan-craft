@@ -96,7 +96,7 @@ export default function Header() {
               href="/"
               className={`text-2xl lg:text-3xl font-serif font-bold transition-colors duration-300 ${getTextColor()}`}
             >
-              Cirebon Rattan
+              Cirebon Rattan Craft
             </Link>
           </motion.div>
 

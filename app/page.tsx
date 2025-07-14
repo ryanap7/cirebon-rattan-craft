@@ -97,7 +97,7 @@ const testimonials = [
   {
     name: "Sarah Johnson",
     company: "Interior Design Studio, Australia",
-    text: "The quality of Cirebon Rattan's furniture exceeded our expectations. Their attention to detail and craftsmanship is truly remarkable.",
+    text: "The quality of Cirebon Rattan Craft's furniture exceeded our expectations. Their attention to detail and craftsmanship is truly remarkable.",
     rating: 5,
   },
   {
@@ -196,7 +196,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-wood-900 mb-6">
-              Why Choose Cirebon Rattan?
+              Why Choose Cirebon Rattan Craft?
             </h2>
             <p className="text-xl text-wood-700 max-w-3xl mx-auto">
               With decades of experience and international certifications, we
