@@ -7,7 +7,7 @@ interface StructuredDataProps {
 
 export default function StructuredData({ type, data }: StructuredDataProps) {
   const generateStructuredData = () => {
-    const baseUrl = "https://cirebonrattan.com";
+    const baseUrl = "https://cirebonrattancraft.com";
 
     switch (type) {
       case "organization":
@@ -41,9 +41,9 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
             areaServed: "Worldwide",
           },
           sameAs: [
-            "https://www.facebook.com/cirebonrattan",
-            "https://www.instagram.com/cirebonrattan",
-            "https://www.linkedin.com/company/cirebonrattan",
+            "https://www.facebook.com/cirebonrattancraft",
+            "https://www.instagram.com/cirebonrattancraft",
+            "https://www.linkedin.com/company/cirebonrattancraft",
           ],
           makesOffer: {
             "@type": "Offer",

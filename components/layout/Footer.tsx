@@ -98,19 +98,21 @@ export default function Footer() {
                 <div className="flex items-center">
                   <Mail className="h-5 w-5 text-gold-400 mr-3 flex-shrink-0" />
                   <span className="text-cream-200">
-                    export@cirebonrattan.com
+                    export@cirebonrattancraft.com
                   </span>
                 </div>
                 <div className="flex items-center">
                   <Globe className="h-5 w-5 text-gold-400 mr-3 flex-shrink-0" />
-                  <span className="text-cream-200">www.cirebonrattan.com</span>
+                  <span className="text-cream-200">
+                    www.cirebonrattancraft.com
+                  </span>
                 </div>
               </div>
 
               {/* Social links */}
               <div className="flex space-x-4">
                 <motion.a
-                  href="https://facebook.com/cirebonrattan"
+                  href="https://facebook.com/cirebonrattancraft"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Kunjungi Facebook Cirebon Rattan Craft"
@@ -121,7 +123,7 @@ export default function Footer() {
                   <Facebook className="h-5 w-5" />
                 </motion.a>
                 <motion.a
-                  href="https://instagram.com/cirebonrattan"
+                  href="https://instagram.com/cirebonrattancraft"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Kunjungi Instagram Cirebon Rattan Craft"
@@ -132,8 +134,8 @@ export default function Footer() {
                   <Instagram className="h-5 w-5" />
                 </motion.a>
                 <motion.a
-                  href="mailto:export@cirebonrattan.com"
-                  aria-label="Kirim email ke export@cirebonrattan.com"
+                  href="mailto:info@cirebonrattancraft.com"
+                  aria-label="Kirim email ke info@cirebonrattancraft.com"
                   className="w-10 h-10 bg-wood-700 rounded-full flex items-center justify-center hover:bg-gold-600 transition-colors duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}

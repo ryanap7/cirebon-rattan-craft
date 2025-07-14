@@ -59,7 +59,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
         {/* SEO & Canonical */}
-        <link rel="canonical" href="https://cirebonrattan.com" />
+        <link rel="canonical" href="https://cirebonrattancraft.com" />
 
         {/* Favicon */}
         <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />

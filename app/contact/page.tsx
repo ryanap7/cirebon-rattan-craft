@@ -1,46 +1,51 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { MapPin, Phone, Mail, Clock, Send, MessageSquare } from 'lucide-react'
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { MapPin, Phone, Mail, Clock, Send, MessageSquare } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    country: '',
-    phone: '',
-    subject: '',
-    message: '',
-    inquiryType: 'general'
-  })
+    name: "",
+    email: "",
+    company: "",
+    country: "",
+    phone: "",
+    subject: "",
+    message: "",
+    inquiryType: "general",
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Handle form submission
-    console.log('Form submitted:', formData)
-  }
+    console.log("Form submitted:", formData);
+  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
+      [e.target.name]: e.target.value,
+    });
+  };
 
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
       <section className="relative py-20 bg-hero-gradient overflow-hidden">
         <div className="absolute inset-0 bg-black/40"></div>
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://images.pexels.com/photos/6969847/pexels-photo-6969847.jpeg')"
+            backgroundImage:
+              "url('https://images.pexels.com/photos/6969847/pexels-photo-6969847.jpeg')",
           }}
         ></div>
-        
+
         <div className="container-max section-padding text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -52,7 +57,7 @@ export default function Contact() {
               Get In Touch
             </h1>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto font-medium">
-              Ready to import premium rattan furniture? We're here to help with 
+              Ready to import premium rattan furniture? We're here to help with
               quotes, product information, and export assistance.
             </p>
           </motion.div>
@@ -74,17 +79,21 @@ export default function Contact() {
               <h2 className="text-3xl font-serif font-bold text-wood-900 mb-8">
                 Contact Information
               </h2>
-              
+
               <div className="space-y-8">
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-wood-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <MapPin className="h-6 w-6 text-wood-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-wood-900 mb-2">Address</h3>
+                    <h3 className="font-semibold text-wood-900 mb-2">
+                      Address
+                    </h3>
                     <p className="text-wood-700">
-                      Jl. Raya Industri No. 123<br />
-                      Cirebon, West Java 45122<br />
+                      Jl. Raya Industri No. 123
+                      <br />
+                      Cirebon, West Java 45122
+                      <br />
                       Indonesia
                     </p>
                   </div>
@@ -97,7 +106,8 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-wood-900 mb-2">Phone</h3>
                     <p className="text-wood-700">
-                      +62 231 123 4567<br />
+                      +62 231 123 4567
+                      <br />
                       WhatsApp: +62 812 3456 7890
                     </p>
                   </div>
@@ -109,10 +119,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-wood-900 mb-2">Email</h3>
-                    <p className="text-wood-700">
-                      export@cirebonrattan.com<br />
-                      info@cirebonrattan.com
-                    </p>
+                    <p className="text-wood-700">info@cirebonrattancraft.com</p>
                   </div>
                 </div>
 
@@ -121,11 +128,16 @@ export default function Contact() {
                     <Clock className="h-6 w-6 text-wood-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-wood-900 mb-2">Business Hours</h3>
+                    <h3 className="font-semibold text-wood-900 mb-2">
+                      Business Hours
+                    </h3>
                     <p className="text-wood-700">
-                      Monday - Friday: 8:00 AM - 5:00 PM<br />
-                      Saturday: 8:00 AM - 12:00 PM<br />
-                      Sunday: Closed<br />
+                      Monday - Friday: 8:00 AM - 5:00 PM
+                      <br />
+                      Saturday: 8:00 AM - 12:00 PM
+                      <br />
+                      Sunday: Closed
+                      <br />
                       <span className="text-sm text-wood-600">(GMT+7)</span>
                     </p>
                   </div>
@@ -146,7 +158,7 @@ export default function Contact() {
                   WhatsApp Us
                 </motion.a>
                 <motion.a
-                  href="mailto:export@cirebonrattan.com"
+                  href="mailto:infot@cirebonrattancraft.com"
                   className="w-full bg-wood-600 hover:bg-wood-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -172,7 +184,10 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-wood-700 font-medium mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-wood-700 font-medium mb-2"
+                    >
                       Full Name *
                     </label>
                     <input
@@ -187,7 +202,10 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-wood-700 font-medium mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-wood-700 font-medium mb-2"
+                    >
                       Email Address *
                     </label>
                     <input
@@ -205,7 +223,10 @@ export default function Contact() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="company" className="block text-wood-700 font-medium mb-2">
+                    <label
+                      htmlFor="company"
+                      className="block text-wood-700 font-medium mb-2"
+                    >
                       Company Name
                     </label>
                     <input
@@ -219,7 +240,10 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="country" className="block text-wood-700 font-medium mb-2">
+                    <label
+                      htmlFor="country"
+                      className="block text-wood-700 font-medium mb-2"
+                    >
                       Country *
                     </label>
                     <input
@@ -237,7 +261,10 @@ export default function Contact() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="phone" className="block text-wood-700 font-medium mb-2">
+                    <label
+                      htmlFor="phone"
+                      className="block text-wood-700 font-medium mb-2"
+                    >
                       Phone Number
                     </label>
                     <input
@@ -251,7 +278,10 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="inquiryType" className="block text-wood-700 font-medium mb-2">
+                    <label
+                      htmlFor="inquiryType"
+                      className="block text-wood-700 font-medium mb-2"
+                    >
                       Inquiry Type *
                     </label>
                     <select
@@ -273,7 +303,10 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-wood-700 font-medium mb-2">
+                  <label
+                    htmlFor="subject"
+                    className="block text-wood-700 font-medium mb-2"
+                  >
                     Subject *
                   </label>
                   <input
@@ -289,7 +322,10 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-wood-700 font-medium mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-wood-700 font-medium mb-2"
+                  >
                     Message *
                   </label>
                   <textarea
@@ -333,8 +369,8 @@ export default function Contact() {
               Visit Our Factory
             </h2>
             <p className="text-xl text-wood-700 max-w-3xl mx-auto">
-              We welcome international buyers to visit our manufacturing facility in Cirebon 
-              to see our craftsmanship process firsthand.
+              We welcome international buyers to visit our manufacturing
+              facility in Cirebon to see our craftsmanship process firsthand.
             </p>
           </motion.div>
 
@@ -348,14 +384,18 @@ export default function Contact() {
             <div className="aspect-video bg-cream-200 flex items-center justify-center">
               <div className="text-center">
                 <MapPin className="h-16 w-16 text-wood-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-wood-900 mb-2">Factory Location</h3>
+                <h3 className="text-xl font-semibold text-wood-900 mb-2">
+                  Factory Location
+                </h3>
                 <p className="text-wood-700">Cirebon, West Java, Indonesia</p>
-                <p className="text-wood-600 text-sm mt-2">Interactive map coming soon</p>
+                <p className="text-wood-600 text-sm mt-2">
+                  Interactive map coming soon
+                </p>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-  )
+  );
 }

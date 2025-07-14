@@ -1,11 +1,11 @@
-import { NextResponse } from 'next/server'
+import { NextResponse } from "next/server";
 
 export async function GET() {
   const robotsTxt = `User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://cirebonrattan.com/api/sitemap
+Sitemap: https://cirebonrattancraft.com/api/sitemap
 
 # Disallow admin and API routes
 Disallow: /api/
@@ -38,12 +38,12 @@ Disallow: /
 
 User-agent: DotBot
 Disallow: /
-`
+`;
 
   return new NextResponse(robotsTxt, {
     headers: {
-      'Content-Type': 'text/plain',
-      'Cache-Control': 'public, max-age=86400' // Cache for 24 hours
-    }
-  })
+      "Content-Type": "text/plain",
+      "Cache-Control": "public, max-age=86400", // Cache for 24 hours
+    },
+  });
 }
