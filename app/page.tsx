@@ -845,6 +845,7 @@ export default function Home() {
                     <Link
                       href={`/blog/${post.slug}`}
                       className="text-wood-600 hover:text-wood-900 font-medium text-sm inline-flex items-center"
+                      aria-label={`Read more about ${post.title}`}
                     >
                       Read More
                       <ArrowRight className="ml-1 h-4 w-4" />
