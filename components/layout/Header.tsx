@@ -87,16 +87,15 @@ export default function Header() {
       <nav className="container-max section-padding">
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
-          <motion.div
-            className="flex-shrink-0"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          >
-            <Link
-              href="/"
-              className={`text-2xl lg:text-3xl font-serif font-bold transition-colors duration-300 ${getTextColor()}`}
-            >
-              Cirebon Rattan Craft
+          <motion.div className="flex-shrink-0">
+            <Link href="/" className="block w-[150px] lg:w-[180px]">
+              <motion.img
+                src="/assets/logo.png"
+                alt="Cirebon Rattan Craft Logo"
+                className="w-16 h-auto"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              />
             </Link>
           </motion.div>
 
