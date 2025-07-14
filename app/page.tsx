@@ -121,11 +121,11 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden bg-hero-gradient">
         <div className="absolute inset-0 bg-black/30 z-10" />
         <Image
-          src="https://images.pexels.com/photos/6969835/pexels-photo-6969835.jpeg?w=1920&auto=compress&cs=tinysrgb"
+          src="https://images.pexels.com/photos/6969835/pexels-photo-6969835.jpeg?w=1080&auto=compress&cs=tinysrgb&fm=webp"
           alt="Cirebon Rattan Craft"
           fill
           priority
-          sizes="(max-width: 768px) 100vw, 1920px"
+          sizes="100vw"
           className="object-cover object-center z-0"
         />
 
