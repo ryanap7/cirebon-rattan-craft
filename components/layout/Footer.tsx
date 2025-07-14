@@ -1,61 +1,61 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { 
-  Facebook, 
-  Instagram, 
-  Mail, 
-  Phone, 
-  MapPin, 
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+  Facebook,
+  Instagram,
+  Mail,
+  Phone,
+  MapPin,
   Globe,
   Truck,
   Shield,
   Award,
-  Heart
-} from 'lucide-react'
+  Heart,
+} from "lucide-react";
 
 const footerLinks = {
   products: [
-    { name: 'Living Room Sets', href: '/products/living-room' },
-    { name: 'Dining Sets', href: '/products/dining-sets' },
-    { name: 'Bedroom Furniture', href: '/products/bedroom' },
-    { name: 'Outdoor Furniture', href: '/products/outdoor' },
-    { name: 'Decorative Items', href: '/products/decorative' },
-    { name: 'Custom Designs', href: '/products/custom' }
+    { name: "Living Room Sets", href: "/products/living-room" },
+    { name: "Dining Sets", href: "/products/dining-sets" },
+    { name: "Bedroom Furniture", href: "/products/bedroom" },
+    { name: "Outdoor Furniture", href: "/products/outdoor" },
+    { name: "Decorative Items", href: "/products/decorative" },
+    { name: "Custom Designs", href: "/products/custom" },
   ],
   company: [
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Craftsmanship', href: '/about#craftsmanship' },
-    { name: 'Sustainability', href: '/about#sustainability' },
-    { name: 'Quality Standards', href: '/about#quality' },
-    { name: 'Export Process', href: '/about#export' },
-    { name: 'Certifications', href: '/about#certifications' }
+    { name: "About Us", href: "/about" },
+    { name: "Our Craftsmanship", href: "/about#craftsmanship" },
+    { name: "Sustainability", href: "/about#sustainability" },
+    { name: "Quality Standards", href: "/about#quality" },
+    { name: "Export Process", href: "/about#export" },
+    { name: "Certifications", href: "/about#certifications" },
   ],
   support: [
-    { name: 'Contact Us', href: '/contact' },
-    { name: 'Get Quote', href: '/quote' },
-    { name: 'Shipping Info', href: '/shipping' },
-    { name: 'Care Instructions', href: '/care-guide' },
-    { name: 'FAQ', href: '/faq' },
-    { name: 'Terms & Conditions', href: '/terms' }
+    { name: "Contact Us", href: "/contact" },
+    { name: "Get Quote", href: "/quote" },
+    { name: "Shipping Info", href: "/shipping" },
+    { name: "Care Instructions", href: "/care-guide" },
+    { name: "FAQ", href: "/faq" },
+    { name: "Terms & Conditions", href: "/terms" },
   ],
   resources: [
-    { name: 'Blog', href: '/blog' },
-    { name: 'Design Inspiration', href: '/blog/design' },
-    { name: 'Industry News', href: '/blog/industry' },
-    { name: 'Care Tips', href: '/blog/care-tips' },
-    { name: 'Catalog Download', href: '/catalog' },
-    { name: 'Press Kit', href: '/press' }
-  ]
-}
+    { name: "Blog", href: "/blog" },
+    { name: "Design Inspiration", href: "/blog/design" },
+    { name: "Industry News", href: "/blog/industry" },
+    { name: "Care Tips", href: "/blog/care-tips" },
+    { name: "Catalog Download", href: "/catalog" },
+    { name: "Press Kit", href: "/press" },
+  ],
+};
 
 const certifications = [
-  { name: 'FSC Certified', icon: Award },
-  { name: 'ISO 9001', icon: Shield },
-  { name: 'Export Licensed', icon: Truck },
-  { name: 'Eco-Friendly', icon: Heart }
-]
+  { name: "FSC Certified", icon: Award },
+  { name: "ISO 9001", icon: Shield },
+  { name: "Export Licensed", icon: Truck },
+  { name: "Eco-Friendly", icon: Heart },
+];
 
 export default function Footer() {
   return (
@@ -71,19 +71,25 @@ export default function Footer() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <Link href="/" className="text-3xl font-serif font-bold text-gold-400 mb-6 block">
+              <Link
+                href="/"
+                className="text-3xl font-serif font-bold text-gold-400 mb-6 block"
+              >
                 Cirebon Rattan
               </Link>
               <p className="text-cream-200 mb-6 leading-relaxed">
-                Premium Indonesian rattan furniture manufacturer and exporter based in Cirebon, 
-                West Java. Creating exceptional handcrafted furniture for over 25 years.
+                Premium Indonesian rattan furniture manufacturer and exporter
+                based in Cirebon, West Java. Creating exceptional handcrafted
+                furniture for over 25 years.
               </p>
-              
+
               {/* Contact info */}
               <div className="space-y-4 mb-6">
                 <div className="flex items-center">
                   <MapPin className="h-5 w-5 text-gold-400 mr-3 flex-shrink-0" />
-                  <span className="text-cream-200">Cirebon, West Java, Indonesia</span>
+                  <span className="text-cream-200">
+                    Cirebon, West Java, Indonesia
+                  </span>
                 </div>
                 <div className="flex items-center">
                   <Phone className="h-5 w-5 text-gold-400 mr-3 flex-shrink-0" />
@@ -91,7 +97,9 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center">
                   <Mail className="h-5 w-5 text-gold-400 mr-3 flex-shrink-0" />
-                  <span className="text-cream-200">export@cirebonrattan.com</span>
+                  <span className="text-cream-200">
+                    export@cirebonrattan.com
+                  </span>
                 </div>
                 <div className="flex items-center">
                   <Globe className="h-5 w-5 text-gold-400 mr-3 flex-shrink-0" />
@@ -105,6 +113,7 @@ export default function Footer() {
                   href="https://facebook.com/cirebonrattan"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Kunjungi Facebook Cirebon Rattan"
                   className="w-10 h-10 bg-wood-700 rounded-full flex items-center justify-center hover:bg-gold-600 transition-colors duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
@@ -115,6 +124,7 @@ export default function Footer() {
                   href="https://instagram.com/cirebonrattan"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Kunjungi Instagram Cirebon Rattan"
                   className="w-10 h-10 bg-wood-700 rounded-full flex items-center justify-center hover:bg-gold-600 transition-colors duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
@@ -123,6 +133,7 @@ export default function Footer() {
                 </motion.a>
                 <motion.a
                   href="mailto:export@cirebonrattan.com"
+                  aria-label="Kirim email ke export@cirebonrattan.com"
                   className="w-10 h-10 bg-wood-700 rounded-full flex items-center justify-center hover:bg-gold-600 transition-colors duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
@@ -238,7 +249,9 @@ export default function Footer() {
           viewport={{ once: true }}
           className="mt-12 pt-8 border-t border-wood-700"
         >
-          <h3 className="text-gold-400 font-semibold mb-6 text-center">Our Certifications</h3>
+          <h3 className="text-gold-400 font-semibold mb-6 text-center">
+            Our Certifications
+          </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {certifications.map((cert, index) => (
               <div key={index} className="flex items-center justify-center">
@@ -261,7 +274,8 @@ export default function Footer() {
               viewport={{ once: true }}
               className="text-cream-300 text-sm mb-4 md:mb-0"
             >
-              © 2024 Cirebon Rattan Exports. All rights reserved. | Premium Indonesian Rattan Furniture Manufacturer
+              © 2024 Cirebon Rattan Exports. All rights reserved. | Premium
+              Indonesian Rattan Furniture Manufacturer
             </motion.p>
             <motion.div
               initial={{ opacity: 0 }}
@@ -270,13 +284,22 @@ export default function Footer() {
               viewport={{ once: true }}
               className="flex space-x-6 text-sm"
             >
-              <Link href="/privacy" className="text-cream-300 hover:text-gold-400 transition-colors duration-200">
+              <Link
+                href="/privacy"
+                className="text-cream-300 hover:text-gold-400 transition-colors duration-200"
+              >
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-cream-300 hover:text-gold-400 transition-colors duration-200">
+              <Link
+                href="/terms"
+                className="text-cream-300 hover:text-gold-400 transition-colors duration-200"
+              >
                 Terms of Service
               </Link>
-              <Link href="/sitemap" className="text-cream-300 hover:text-gold-400 transition-colors duration-200">
+              <Link
+                href="/sitemap"
+                className="text-cream-300 hover:text-gold-400 transition-colors duration-200"
+              >
                 Sitemap
               </Link>
             </motion.div>
@@ -284,5 +307,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
