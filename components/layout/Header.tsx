@@ -91,7 +91,7 @@ export default function Header() {
           <motion.div
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            className="w-16 h-auto"
+            className="w-[180px] h-auto cursor-pointer"
           >
             <Image
               src="/assets/logo.webp"
