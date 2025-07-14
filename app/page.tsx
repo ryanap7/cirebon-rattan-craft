@@ -133,7 +133,7 @@ const blogPosts = [
     publishedAt: "2024-01-12",
     readTime: "6 min read",
     tags: ["maintenance", "care", "cleaning", "tips"],
-    featured: false,
+    featured: true,
   },
   {
     id: 3,
@@ -153,66 +153,6 @@ const blogPosts = [
     publishedAt: "2024-01-10",
     readTime: "10 min read",
     tags: ["trends", "design", "2024", "interior"],
-    featured: true,
-  },
-  {
-    id: 4,
-    title: "Sustainable Rattan Harvesting Practices in Indonesia",
-    slug: "traditional-rattan-weaving-techniques-cirebon",
-    excerpt:
-      "Learn about the sustainable practices we employ in harvesting rattan from Indonesian forests. Discover how traditional methods support both quality and environmental conservation.",
-    content: "Full article content would go here...",
-    image: "https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg",
-    category: "craftsmanship",
-    author: {
-      name: "Dr. Bambang Forestry",
-      avatar:
-        "https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg",
-      bio: "Forestry expert and sustainability consultant",
-    },
-    publishedAt: "2024-01-08",
-    readTime: "12 min read",
-    tags: ["sustainability", "harvesting", "environment", "indonesia"],
-    featured: false,
-  },
-  {
-    id: 5,
-    title: "Export Process and Shipping Guidelines for Rattan Furniture",
-    slug: "traditional-rattan-weaving-techniques-cirebon",
-    excerpt:
-      "A comprehensive guide to our export process, from order placement to delivery. Understand shipping methods, documentation, and what to expect when importing from Indonesia.",
-    content: "Full article content would go here...",
-    image: "https://images.pexels.com/photos/1571464/pexels-photo-1571464.jpeg",
-    category: "business-export",
-    author: {
-      name: "Rudi Export Manager",
-      avatar:
-        "https://images.pexels.com/photos/1571464/pexels-photo-1571464.jpeg",
-      bio: "International trade specialist with 20 years experience",
-    },
-    publishedAt: "2024-01-05",
-    readTime: "15 min read",
-    tags: ["export", "shipping", "business", "international"],
-    featured: false,
-  },
-  {
-    id: 6,
-    title: "Incorporating Rattan into Modern Interior Design",
-    slug: "traditional-rattan-weaving-techniques-cirebon",
-    excerpt:
-      "Discover how to seamlessly blend traditional rattan furniture with contemporary interior design. Tips, tricks, and inspiration for creating stunning modern spaces.",
-    content: "Full article content would go here...",
-    image: "https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg",
-    category: "design-trends",
-    author: {
-      name: "Lisa Interior Designer",
-      avatar:
-        "https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg",
-      bio: "Award-winning interior designer and style consultant",
-    },
-    publishedAt: "2024-01-03",
-    readTime: "9 min read",
-    tags: ["interior-design", "modern", "styling", "decor"],
     featured: true,
   },
 ];
