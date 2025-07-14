@@ -734,33 +734,30 @@ export default function Home() {
             </p>
           </motion.div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {Array.isArray(featuredPosts) &&
-              featuredPosts.map((post, index) => (
-                <motion.article
-                  key={post.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.6 }}
-                  className="bg-white rounded-xl overflow-hidden shadow-soft card-hover"
-                >
-                  <div className="relative h-48 overflow-hidden">
-                    {post.image && (
-                      <Image
-                        src={post.image}
-                        alt={post.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-cover transition-transform duration-300 hover:scale-110"
-                      />
-                    )}
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-gold-500 text-wood-900 px-3 py-1 rounded-full text-sm font-semibold">
-                        Featured
-                      </span>
-                    </div>
+            {featuredPosts.map((post, index) => (
+              <motion.article
+                key={post.id}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
+                className="bg-white rounded-xl overflow-hidden shadow-soft card-hover"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-300 hover:scale-110"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-gold-500 text-wood-900 px-3 py-1 rounded-full text-sm font-semibold">
+                      Featured
+                    </span>
                   </div>
+                </div>
 
-                  <div className="p-6">
+                {/* <div className="p-6">
                     <div className="flex items-center text-sm text-wood-800 mb-3">
                       <Calendar className="h-4 w-4 mr-2" />
                       <span>
@@ -796,9 +793,9 @@ export default function Home() {
                         <ArrowRight className="ml-1 h-4 w-4" />
                       </Link>
                     </div>
-                  </div>
-                </motion.article>
-              ))}
+                  </div> */}
+              </motion.article>
+            ))}
           </div>
         </div>
       </section>
