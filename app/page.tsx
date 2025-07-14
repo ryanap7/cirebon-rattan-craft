@@ -47,7 +47,7 @@ const featuredProducts = [
     id: 3,
     name: "Outdoor Garden Collection",
     category: "Outdoor",
-    image: "https://images.pexels.com/photos/6969833/pexels-photo-6969833.jpeg",
+    image: "https://images.pexels.com/photos/6969836/pexels-photo-6969836.jpeg",
     price: "Starting from $650",
     description:
       "Weather-resistant outdoor furniture perfect for patios and gardens",
