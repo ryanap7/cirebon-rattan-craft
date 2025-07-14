@@ -511,7 +511,10 @@ export default function Home() {
                     src={process.image}
                     alt={process.title}
                     fill
-                    className="object-cover"
+                    width={384}
+                    height={192}
+                    className="rounded-xl object-cover w-full h-auto"
+                    sizes="(max-width: 768px) 100vw, 384px"
                   />
                   <div className="absolute top-4 left-4 w-12 h-12 bg-gold-500 text-wood-900 rounded-full flex items-center justify-center font-bold text-lg">
                     {process.step}
