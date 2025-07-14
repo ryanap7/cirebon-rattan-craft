@@ -110,7 +110,7 @@ const blogPosts = [
         "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg",
       bio: "Master craftsperson and cultural heritage expert",
     },
-    publishedAt: "2024-01-15",
+    publishedAt: "1/15/2024",
     readTime: "8 min read",
     tags: ["craftsmanship", "tradition", "cirebon", "weaving"],
     featured: true,
@@ -130,7 +130,7 @@ const blogPosts = [
         "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
       bio: "Furniture care specialist with 15 years experience",
     },
-    publishedAt: "2024-01-12",
+    publishedAt: "1/15/2024",
     readTime: "6 min read",
     tags: ["maintenance", "care", "cleaning", "tips"],
     featured: true,
@@ -150,7 +150,7 @@ const blogPosts = [
         "https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg",
       bio: "Interior design expert specializing in natural materials",
     },
-    publishedAt: "2024-01-10",
+    publishedAt: "1/15/2024",
     readTime: "10 min read",
     tags: ["trends", "design", "2024", "interior"],
     featured: true,
@@ -758,15 +758,12 @@ export default function Home() {
                 </div>
 
                 <div className="p-6">
-                  {/* <div className="flex items-center text-sm text-wood-800 mb-3">
+                  <div className="flex items-center text-sm text-wood-800 mb-3">
                     <Calendar className="h-4 w-4 mr-2" />
-                    <span>
-                      {new Date(post.publishedAt).toLocaleDateString()}
-                    </span>
+                    <span>{post.publishedAt}</span>
                     <span className="mx-2">•</span>
                     <span>{post.readTime}</span>
-                  </div> */}
-
+                  </div>
                   <h3 className="text-xl font-semibold text-wood-900 mb-3 line-clamp-2">
                     {post.title}
                   </h3>
