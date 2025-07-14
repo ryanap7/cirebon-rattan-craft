@@ -79,6 +79,12 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
 
+        <link
+          rel="preload"
+          as="image"
+          href="https://images.pexels.com/photos/6969835/pexels-photo-6969835.jpeg?w=1920&auto=compress&cs=tinysrgb&fm=webp"
+        />
+
         <StructuredData type="organization" data={{}} />
       </head>
       <body

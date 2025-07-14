@@ -122,11 +122,10 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/30 z-10" />
         {/* Optimized Background */}
         <Image
-          src="https://images.pexels.com/photos/6969835/pexels-photo-6969835.jpeg"
+          src="https://images.pexels.com/photos/6969835/pexels-photo-6969835.jpeg?w=1920&auto=compress&cs=tinysrgb&fm=webp"
           alt="Hero Background"
           fill
           priority
-          quality={75}
           sizes="100vw"
           className="object-cover object-center z-0"
         />
@@ -272,7 +271,6 @@ export default function Home() {
                     fill
                     sizes="(max-width: 768px) 100vw, 25vw"
                     className="object-cover transition-transform duration-300 hover:scale-110"
-                    priority={index === 0}
                   />
                   {product.features && (
                     <div className="absolute top-4 left-4">
@@ -518,7 +516,6 @@ export default function Home() {
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 288px"
-                    priority={index === 0}
                   />
                   <div className="absolute top-4 left-4 w-12 h-12 bg-gold-500 text-wood-900 rounded-full flex items-center justify-center font-bold text-lg">
                     {process.step}
