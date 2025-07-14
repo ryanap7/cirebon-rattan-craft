@@ -715,7 +715,7 @@ export default function Home() {
       </section>
 
       {/* Blog */}
-      {/* <section className="py-20 bg-white">
+      <section className="py-20 bg-white">
         <div className="container-max section-padding">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -744,13 +744,15 @@ export default function Home() {
                   className="bg-white rounded-xl overflow-hidden shadow-soft card-hover"
                 >
                   <div className="relative h-48 overflow-hidden">
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-300 hover:scale-110"
-                    />
+                    {post.image && (
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-300 hover:scale-110"
+                      />
+                    )}
                     <div className="absolute top-4 left-4">
                       <span className="bg-gold-500 text-wood-900 px-3 py-1 rounded-full text-sm font-semibold">
                         Featured
@@ -762,7 +764,9 @@ export default function Home() {
                     <div className="flex items-center text-sm text-wood-800 mb-3">
                       <Calendar className="h-4 w-4 mr-2" />
                       <span>
-                        {new Date(post.publishedAt).toLocaleDateString()}
+                        {post.publishedAt
+                          ? new Date(post.publishedAt).toLocaleDateString()
+                          : "Unknown Date"}
                       </span>
                       <span className="mx-2">•</span>
                       <span>{post.readTime}</span>
@@ -780,11 +784,11 @@ export default function Home() {
                       <div className="flex items-center">
                         <div className="w-8 h-8 bg-wood-200 rounded-full mr-3"></div>
                         <span className="text-sm text-wood-800">
-                          {post.author.name}
+                          {post.author?.name ?? "Anonymous"}
                         </span>
                       </div>
                       <Link
-                        href={`/blog/${post.slug}`}
+                        href={`/blog/${post.slug ?? "unknown-slug"}`}
                         className="text-wood-900 hover:text-gold-600 font-medium text-sm inline-flex items-center"
                         aria-label={`Read article about ${post.title}`}
                       >
@@ -797,7 +801,7 @@ export default function Home() {
               ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-forest-gradient relative overflow-hidden">
