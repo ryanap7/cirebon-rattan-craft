@@ -90,7 +90,7 @@ export default function Header() {
           <motion.div className="flex-shrink-0">
             <Link href="/" className="block w-[150px] lg:w-[180px]">
               <motion.img
-                src="/assets/logo.png"
+                src="/assets/logo.webp"
                 alt="Cirebon Rattan Craft Logo"
                 className="w-16 h-auto"
                 whileHover={{ scale: 1.05 }}
