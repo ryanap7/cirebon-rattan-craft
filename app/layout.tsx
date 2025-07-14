@@ -8,11 +8,13 @@ import StructuredData from "@/components/seo/StructuredData";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
 });
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -56,7 +58,27 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
+        {/* SEO & Canonical */}
         <link rel="canonical" href="https://cirebonrattan.com" />
+
+        {/* Preconnect ke Pexels (image CDN) */}
+        <link
+          rel="preconnect"
+          href="https://images.pexels.com"
+          crossOrigin=""
+        />
+        <link rel="dns-prefetch" href="https://images.pexels.com" />
+
+        {/* Preconnect ke Google Fonts (sudah digunakan oleh next/font) */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
         <StructuredData type="organization" data={{}} />
       </head>
       <body

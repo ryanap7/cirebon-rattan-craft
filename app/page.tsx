@@ -264,12 +264,10 @@ export default function Home() {
               >
                 <div className="relative h-64 overflow-hidden">
                   <Image
-                    src={`${product.image}?auto=compress&cs=tinysrgb&w=384&h=256`}
+                    src={product.image}
                     alt={product.name}
-                    width={384}
-                    height={256}
-                    className="object-cover w-full h-auto transition-transform duration-300 hover:scale-110"
-                    sizes="(max-width: 768px) 100vw, 384px"
+                    fill
+                    className="object-cover transition-transform duration-300 hover:scale-110"
                   />
                   {product.features && (
                     <div className="absolute top-4 left-4">
@@ -510,13 +508,12 @@ export default function Home() {
               >
                 <div className="relative h-48 rounded-xl overflow-hidden mb-6">
                   <Image
-                    src={process.image}
+                    src={`${process.image}?auto=compress&cs=tinysrgb&w=768&h=288`}
                     alt={process.title}
                     fill
-                    width={384}
-                    height={192}
-                    className="rounded-xl object-cover w-full h-auto"
-                    sizes="(max-width: 768px) 100vw, 384px"
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 288px"
+                    priority={index === 0}
                   />
                   <div className="absolute top-4 left-4 w-12 h-12 bg-gold-500 text-wood-900 rounded-full flex items-center justify-center font-bold text-lg">
                     {process.step}
