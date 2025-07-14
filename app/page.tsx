@@ -14,6 +14,7 @@ import {
   Users,
   Leaf,
   Factory,
+  Calendar,
 } from "lucide-react";
 
 const featuredProducts = [
@@ -93,6 +94,129 @@ const trustSignals = [
   },
 ];
 
+const blogPosts = [
+  {
+    id: 1,
+    title: "Traditional Rattan Weaving Techniques from Cirebon",
+    slug: "traditional-rattan-weaving-techniques-cirebon",
+    excerpt:
+      "Discover the ancient art of rattan weaving that has been passed down through generations in Cirebon, West Java. Learn about the intricate techniques that make Indonesian rattan furniture world-renowned.",
+    content: "Full article content would go here...",
+    image: "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg",
+    category: "craftsmanship",
+    author: {
+      name: "Sari Wijaya",
+      avatar:
+        "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg",
+      bio: "Master craftsperson and cultural heritage expert",
+    },
+    publishedAt: "2024-01-15",
+    readTime: "8 min read",
+    tags: ["craftsmanship", "tradition", "cirebon", "weaving"],
+    featured: true,
+  },
+  {
+    id: 2,
+    title: "How to Clean and Maintain Your Rattan Furniture",
+    slug: "how-to-clean-maintain-rattan-furniture",
+    excerpt:
+      "Keep your rattan furniture looking beautiful for years with these expert care tips. From daily maintenance to deep cleaning, learn the best practices for preserving your investment.",
+    content: "Full article content would go here...",
+    image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
+    category: "care-maintenance",
+    author: {
+      name: "Ahmad Furniture Care",
+      avatar:
+        "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
+      bio: "Furniture care specialist with 15 years experience",
+    },
+    publishedAt: "2024-01-12",
+    readTime: "6 min read",
+    tags: ["maintenance", "care", "cleaning", "tips"],
+    featured: false,
+  },
+  {
+    id: 3,
+    title: "2024 Rattan Furniture Trends: What's Hot This Year",
+    slug: "2024-rattan-furniture-trends-whats-hot",
+    excerpt:
+      "Explore the latest trends in rattan furniture design for 2024. From color palettes to innovative weaving patterns, discover what's shaping the industry this year.",
+    content: "Full article content would go here...",
+    image: "https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg",
+    category: "design-trends",
+    author: {
+      name: "Maya Design Studio",
+      avatar:
+        "https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg",
+      bio: "Interior design expert specializing in natural materials",
+    },
+    publishedAt: "2024-01-10",
+    readTime: "10 min read",
+    tags: ["trends", "design", "2024", "interior"],
+    featured: true,
+  },
+  {
+    id: 4,
+    title: "Sustainable Rattan Harvesting Practices in Indonesia",
+    slug: "sustainable-rattan-harvesting-practices-indonesia",
+    excerpt:
+      "Learn about the sustainable practices we employ in harvesting rattan from Indonesian forests. Discover how traditional methods support both quality and environmental conservation.",
+    content: "Full article content would go here...",
+    image: "https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg",
+    category: "craftsmanship",
+    author: {
+      name: "Dr. Bambang Forestry",
+      avatar:
+        "https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg",
+      bio: "Forestry expert and sustainability consultant",
+    },
+    publishedAt: "2024-01-08",
+    readTime: "12 min read",
+    tags: ["sustainability", "harvesting", "environment", "indonesia"],
+    featured: false,
+  },
+  {
+    id: 5,
+    title: "Export Process and Shipping Guidelines for Rattan Furniture",
+    slug: "export-process-shipping-guidelines-rattan-furniture",
+    excerpt:
+      "A comprehensive guide to our export process, from order placement to delivery. Understand shipping methods, documentation, and what to expect when importing from Indonesia.",
+    content: "Full article content would go here...",
+    image: "https://images.pexels.com/photos/1571464/pexels-photo-1571464.jpeg",
+    category: "business-export",
+    author: {
+      name: "Rudi Export Manager",
+      avatar:
+        "https://images.pexels.com/photos/1571464/pexels-photo-1571464.jpeg",
+      bio: "International trade specialist with 20 years experience",
+    },
+    publishedAt: "2024-01-05",
+    readTime: "15 min read",
+    tags: ["export", "shipping", "business", "international"],
+    featured: false,
+  },
+  {
+    id: 6,
+    title: "Incorporating Rattan into Modern Interior Design",
+    slug: "incorporating-rattan-modern-interior-design",
+    excerpt:
+      "Discover how to seamlessly blend traditional rattan furniture with contemporary interior design. Tips, tricks, and inspiration for creating stunning modern spaces.",
+    content: "Full article content would go here...",
+    image: "https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg",
+    category: "design-trends",
+    author: {
+      name: "Lisa Interior Designer",
+      avatar:
+        "https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg",
+      bio: "Award-winning interior designer and style consultant",
+    },
+    publishedAt: "2024-01-03",
+    readTime: "9 min read",
+    tags: ["interior-design", "modern", "styling", "decor"],
+    featured: true,
+  },
+];
+
 const testimonials = [
   {
     name: "Sarah Johnson",
@@ -115,6 +239,7 @@ const testimonials = [
 ];
 
 export default function Home() {
+  const featuredPosts = blogPosts.filter((post) => post.featured);
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -644,6 +769,89 @@ export default function Home() {
                   </div>
                 </div>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Blog */}
+      <section className="py-20 bg-white">
+        <div className="container-max section-padding">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-wood-900 mb-6">
+              Insights & Inspirations
+            </h2>
+            <p className="text-xl text-wood-700 max-w-3xl mx-auto">
+              Explore stories, design trends, and industry insights from the
+              world of rattan furniture — curated to inspire and inform our
+              global community.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {featuredPosts.map((post, index) => (
+              <motion.article
+                key={post.id}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
+                className="bg-white rounded-xl overflow-hidden shadow-soft card-hover"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-300 hover:scale-110"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-gold-500 text-wood-900 px-3 py-1 rounded-full text-sm font-semibold">
+                      Featured
+                    </span>
+                  </div>
+                </div>
+
+                <div className="p-6">
+                  <div className="flex items-center text-sm text-wood-600 mb-3">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    <span>
+                      {new Date(post.publishedAt).toLocaleDateString()}
+                    </span>
+                    <span className="mx-2">•</span>
+                    <span>{post.readTime}</span>
+                  </div>
+
+                  <h3 className="text-xl font-semibold text-wood-900 mb-3 line-clamp-2">
+                    {post.title}
+                  </h3>
+
+                  <p className="text-wood-700 mb-4 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+
+                  <div className="flex justify-between items-center">
+                    <div className="flex items-center">
+                      <div className="w-8 h-8 bg-wood-200 rounded-full mr-3"></div>
+                      <span className="text-sm text-wood-600">
+                        {post.author.name}
+                      </span>
+                    </div>
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="text-wood-600 hover:text-wood-900 font-medium text-sm inline-flex items-center"
+                    >
+                      Read More
+                      <ArrowRight className="ml-1 h-4 w-4" />
+                    </Link>
+                  </div>
+                </div>
+              </motion.article>
             ))}
           </div>
         </div>
