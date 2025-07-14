@@ -18,6 +18,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cirebonrattancraft.com"),
   title: "Premium Rattan Furniture Export | Cirebon Craftsmanship | Indonesia",
   description:
     "Discover handcrafted Indonesian rattan furniture from Cirebon. Premium quality, sustainable materials, direct manufacturer pricing. Export worldwide with traditional craftsmanship meets modern design.",

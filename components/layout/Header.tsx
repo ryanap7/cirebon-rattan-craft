@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -87,16 +88,20 @@ export default function Header() {
       <nav className="container-max section-padding">
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo Cirebon Rattan Craft */}
-          <motion.div className="flex-shrink-0">
-            <Link href="/" className="block w-[150px] lg:w-[180px]">
-              <motion.img
-                src="/assets/logo.webp"
-                alt="Cirebon Rattan Craft Logo"
-                className="w-16 h-auto"
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              />
-            </Link>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            className="w-16 h-auto"
+          >
+            <Image
+              src="/assets/logo.webp"
+              alt="Cirebon Rattan Craft Logo"
+              width={180}
+              height={60}
+              sizes="(max-width: 768px) 150px, 180px"
+              className="w-full h-auto"
+              priority
+            />
           </motion.div>
 
           {/* Desktop Navigation */}
