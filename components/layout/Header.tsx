@@ -86,7 +86,7 @@ export default function Header() {
     >
       <nav className="container-max section-padding">
         <div className="flex justify-between items-center h-16 lg:h-20">
-          {/* Logo */}
+          {/* Logo Cirebon Rattan Craft */}
           <motion.div className="flex-shrink-0">
             <Link href="/" className="block w-[150px] lg:w-[180px]">
               <motion.img
